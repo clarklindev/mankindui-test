@@ -15,7 +15,7 @@ import TabsExample from './examples/Tabs';
 import TableExample from './examples/Table';
 import SpinnerExample from './examples/Spinner';
 import SnackbarExample from './examples/Snackbar';
-import SliderMultiRangeExample from './examples/SliderMultiRange';
+// import SliderMultiRangeExample from './examples/SliderMultiRange';
 import SliderExample from './examples/Slider';
 import SelectExample from './examples/Select';
 import RadioButtonGroupExample from './examples/RadioButtonGroup';
@@ -254,12 +254,12 @@ const App = () => {
                 </Card.Content>
             </Card>
 
-            <Card>
+            {/* <Card>
                 <Card.Title>Slider Multi Range</Card.Title>
                 <Card.Content>
                     <SliderMultiRangeExample />
                 </Card.Content>
-            </Card>
+            </Card> */}
 
             <Card>
                 <Card.Title>Snackbar</Card.Title>

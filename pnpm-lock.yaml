@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fightclub/libtest':
-        specifier: ^0.0.46
-        version: 0.0.46(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.3)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))
+        specifier: ^0.0.48
+        version: 0.0.48(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.3)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))
       '@tailwindcss/vite':
         specifier: ^4.1.3
         version: 4.1.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))
@@ -344,8 +344,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fightclub/libtest@0.0.46':
-    resolution: {integrity: sha512-8CNv9bRsGJnT2ggC68qk2BiVXOcgLWuRv3nkz7Wj6kqMkw0XDZo9pw5xcFkZT6umGV87AWkjrRjsnb441UfjFw==}
+  '@fightclub/libtest@0.0.48':
+    resolution: {integrity: sha512-1H8vU17YNyKHba/SgcFFvzIEYhfEtD5/qAhVZFzTQL4+nIwfglD7WAA6ID7NjnUS9B3R2P8mq6hvw6ZG+VxrdA==}
     peerDependencies:
       react: ^19.1.0
       react-dom: ^19.1.0
@@ -1591,7 +1591,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@fightclub/libtest@0.0.46(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.3)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))':
+  '@fightclub/libtest@0.0.48(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.3)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))':
     dependencies:
       '@tailwindcss/vite': 4.1.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2))
       class-variance-authority: 0.7.1
