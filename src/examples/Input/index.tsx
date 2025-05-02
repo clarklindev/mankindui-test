@@ -2,9 +2,10 @@ import { useRef, useState } from 'react';
 
 import { Layout, Heading, Icon, Input, Button } from '@fightclub/libtest/components';
 
-import { SpeechIcon } from '@fightclub/libtest/icons'; //input + icon example
-import { SearchIcon, CloseIcon } from '@fightclub/libtest/icons'; //search example
-import { ShowPasswordIcon, HidePasswordIcon } from '@fightclub/libtest/icons'; //password example icons
+import { HiOutlineChatBubbleLeft as SpeechIcon } from 'react-icons/hi2'; //input + icon example
+import { HiMagnifyingGlass as SearchIcon, HiXMark as CloseIcon } from 'react-icons/hi2'; //search example
+import { HiEye as ShowPasswordIcon, HiEyeSlash as HidePasswordIcon } from 'react-icons/hi2'; //password example icons
+
 
 const InputExample = () => {
     const [savedData, setSavedData] = useState('');

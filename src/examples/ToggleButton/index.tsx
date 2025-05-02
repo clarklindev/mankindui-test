@@ -1,5 +1,5 @@
 import { Icon, ToggleButton } from '@fightclub/libtest';
-import { HeartIcon } from '@fightclub/libtest/icons';
+import { HiHeart as HeartIcon } from 'react-icons/hi2';
 
 const ToggleButtonExample = () => {
     //the context provider (can technically wrap inside the component itself)

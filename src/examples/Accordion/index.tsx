@@ -1,6 +1,6 @@
 import { Icon, Accordion } from '@fightclub/libtest/components';
 
-import { ChevronDownIcon, ChevronUpIcon, MinusIcon, PlusIcon } from '@fightclub/libtest/icons';
+import { HiChevronDown as ChevronDownIcon, HiChevronUp as ChevronUpIcon, HiOutlineMinus as MinusIcon, HiOutlinePlus as PlusIcon } from 'react-icons/hi2';
 
 const data = [
     {

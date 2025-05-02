@@ -1,5 +1,5 @@
 import { Icon } from '@fightclub/libtest';
-import { ShoppingCartIcon } from '@fightclub/libtest/icons';
+import { HiShoppingCart as ShoppingCartIcon } from 'react-icons/hi2';
 
 const IconExample = () => {
     return (

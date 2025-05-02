@@ -1,6 +1,6 @@
 import './App.css';
 import { Button, Card, Icon, Navbar } from '@fightclub/libtest';
-import { ModeLightIcon, ModeDarkIcon } from '@fightclub/libtest/icons';
+import { HiOutlineSun as ModeLightIcon, HiOutlineMoon as ModeDarkIcon } from 'react-icons/hi2';
 import { useTheme } from '@fightclub/libtest/context';
 import { useEffect } from 'react';
 
@@ -21,20 +21,20 @@ import SelectExample from './examples/Select';
 import RadioButtonGroupExample from './examples/RadioButtonGroup';
 import RadioButtonExample from './examples/RadioButton';
 import ProgressLoaderExample from './examples/ProgressLoader';
-import PaginationExample from './examples/Pagination';
+// import PaginationExample from './examples/Pagination';
 import NavbarExample from './examples/Navbar';
 import ListExample from './examples/List';
 import DropdownExample from './examples/Dropdown';
 import DividerExample from './examples/Divider';
 import DialogExample from './examples/Dialog';
-import DatepickerExample from './examples/Datepicker';
+// import DatepickerExample from './examples/Datepicker';
 import PopoverExample from './examples/Popover';
 import CounterExample from './examples/Counter';
-import InputOtpExample from './examples/InputOtp';
+// import InputOtpExample from './examples/InputOtp';
 import HeadingExample from './examples/Heading';
 import CheckboxGroupExample from './examples/CheckboxGroup';
 import CheckboxExample from './examples/Checkbox';
-import CalendarExample from './examples/Calendar';
+// import CalendarExample from './examples/Calendar';
 import IconExample from './examples/Icon';
 import ButtonExample from './examples/Button';
 import AvatarExample from './examples/Avatar';
@@ -59,13 +59,13 @@ const App = () => {
                         {colorScheme === 'dark' ? (
                             <Button intent="outlined-nohover" padding="S" onClick={() => setColorScheme('light')}>
                                 <Icon size="L">
-                                    <ModeLightIcon />
+                                    <ModeDarkIcon />
                                 </Icon>
                             </Button>
                         ) : (
                             <Button intent="outlined-nohover" padding="S" onClick={() => setColorScheme('dark')}>
                                 <Icon size="L">
-                                    <ModeDarkIcon />
+                                    <ModeLightIcon />
                                 </Icon>
                             </Button>
                         )}
@@ -118,13 +118,13 @@ const App = () => {
                     <IconExample />
                 </Card.Content>
             </Card>
-
+{/* 
             <Card>
                 <Card.Title>Calendar</Card.Title>
                 <Card.Content>
                     <CalendarExample />
                 </Card.Content>
-            </Card>
+            </Card> */}
 
             <Card>
                 <Card.Title>Checkbox</Card.Title>
@@ -149,12 +149,12 @@ const App = () => {
 
             
 
-            <Card>
+            {/* <Card>
                 <Card.Title>Input OTP</Card.Title>
                 <Card.Content>
                     <InputOtpExample />
                 </Card.Content>
-            </Card>
+            </Card> */}
 
             <Card>
                 <Card.Title>Counter</Card.Title>
@@ -169,13 +169,13 @@ const App = () => {
                     <PopoverExample />
                 </Card.Content>
             </Card>
-
+{/* 
             <Card>
                 <Card.Title>Datepicker</Card.Title>
                 <Card.Content>
                     <DatepickerExample />
                 </Card.Content>
-            </Card>
+            </Card> */}
 
             <Card>
                 <Card.Title>Dialog</Card.Title>
@@ -211,13 +211,13 @@ const App = () => {
                     <NavbarExample />
                 </Card.Content>
             </Card>
-
+{/* 
             <Card>
                 <Card.Title>Pagination</Card.Title>
                 <Card.Content>
                     <PaginationExample />
                 </Card.Content>
-            </Card>
+            </Card> */}
 
             <Card>
                 <Card.Title>Progress loader</Card.Title>

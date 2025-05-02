@@ -1,5 +1,5 @@
 import { Button, Icon, Label, Layout } from '@fightclub/libtest';;
-import { ShoppingCartIcon, ThumbsUpIcon } from '@fightclub/libtest/icons';
+import { HiShoppingCart as ShoppingCartIcon, HiOutlineHandThumbUp as ThumbsUpIcon } from 'react-icons/hi2';
 
 const ButtonExample = () => {
     return (
@@ -8,28 +8,13 @@ const ButtonExample = () => {
                 <Button intent="primary">primary</Button>
             </Layout>
             <Layout>
-                <Button intent="primary-nohover">primary no-hover</Button>
-            </Layout>
-            <Layout>
                 <Button intent="secondary">secondary</Button>
             </Layout>
             <Layout>
-                <Button intent="secondary-nohover">secondary no-hover</Button>
-            </Layout>
-
-            <Layout>
                 <Button intent="contained">Contained</Button>
             </Layout>
-
-            <Layout>
-                <Button intent="contained-nohover">Contained no-hover</Button>
-            </Layout>
-
             <Layout>
                 <Button intent="outlined">Outlined</Button>
-            </Layout>
-            <Layout>
-                <Button intent="outlined-nohover">Outlined no-hover</Button>
             </Layout>
             <Layout>
                 <Button intent="icon">
