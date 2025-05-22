@@ -1,47 +1,53 @@
-import { Heading, Layout, Divider } from '@fightclub/libtest';
+import { Heading, Layout, Divider } from "@fightclub/libtest";
 
 const DividerExample = () => {
-    return (
-        <>
-            <Heading variation="h5" size="level2">
-                Divider (horizontal)
-            </Heading>
-            <Layout>
-                hello
-                <Divider variation="horizontal" />
-                world
-            </Layout>
+  return (
+    <>
+      <Heading as="h5" className="text-l">
+        Divider (horizontal)
+      </Heading>
+      <Layout>
+        hello
+        <Divider variation="horizontal" />
+        world
+      </Layout>
 
-            <Heading variation="h5" size="level2">
-                Divider labelled (horizontal)
-            </Heading>
-            <Layout>
-                hello
-                <Divider variation="horizontal">OR</Divider>
-                world
-            </Layout>
+      <Heading as="h5" className="text-l">
+        Divider labelled (horizontal)
+      </Heading>
+      <Layout>
+        hello
+        <Divider variation="horizontal">OR</Divider>
+        world
+      </Layout>
 
-            <Heading variation="h5" size="level2">
-                Divider (vertical)
-            </Heading>
-            <Layout>
-                <div style={{ height: '300px' }} className="flex flex-start items-start">
-                    hello
-                    <Divider variation="vertical" />
-                    world
-                </div>
-            </Layout>
+      <Heading as="h5" className="text-l">
+        Divider (vertical)
+      </Heading>
+      <Layout>
+        <div
+          style={{ height: "300px" }}
+          className="flex flex-start items-start"
+        >
+          hello
+          <Divider variation="vertical" />
+          world
+        </div>
+      </Layout>
 
-            <Heading variation="h5" size="level2">
-                Divider labelled (vertical)
-            </Heading>
-            <Layout>
-                <div style={{ height: '300px' }} className="flex flex-start items-start">
-                    hello<Divider variation="vertical">OR</Divider>
-                    world
-                </div>
-            </Layout>
-        </>
-    );
+      <Heading as="h5" className="text-l">
+        Divider labelled (vertical)
+      </Heading>
+      <Layout>
+        <div
+          style={{ height: "300px" }}
+          className="flex flex-start items-start"
+        >
+          hello<Divider variation="vertical">OR</Divider>
+          world
+        </div>
+      </Layout>
+    </>
+  );
 };
 export default DividerExample;
