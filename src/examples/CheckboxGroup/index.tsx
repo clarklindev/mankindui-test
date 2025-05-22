@@ -26,7 +26,7 @@ const CheckboxExample = () => {
 
   const onChange = (
     savedData: Array<boolean>,
-    updateSavedData,
+    updateSavedData: (newData: Array<boolean>) => void,
     index: number
   ) => {
     const newValues = [...savedData];
