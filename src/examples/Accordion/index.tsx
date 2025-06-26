@@ -1,4 +1,4 @@
-import { Icon, Accordion, TabbedCard } from "@fightclub/libtest/components";
+import { Icon, Accordion, TabbedCard } from "@mankindui/core/components";
 
 import {
   ChevronDownIcon,

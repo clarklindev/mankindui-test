@@ -1,4 +1,4 @@
-import { ProgressLoader, TabbedCard } from "@fightclub/libtest/components";
+import { ProgressLoader, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const ProgressLoaderExample = () => {

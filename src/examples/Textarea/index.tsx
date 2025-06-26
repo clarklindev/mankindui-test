@@ -1,4 +1,4 @@
-import { Textarea, TabbedCard } from "@fightclub/libtest/components";
+import { Textarea, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const TextareaExample = () => {

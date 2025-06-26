@@ -5,7 +5,7 @@ import {
   Layout,
   Heading,
   TabbedCard,
-} from "@fightclub/libtest/components";
+} from "@mankindui/core/components";
 
 import Code from "./code.mdx";
 

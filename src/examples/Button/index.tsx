@@ -4,7 +4,7 @@ import {
   Label,
   Layout,
   TabbedCard,
-} from "@fightclub/libtest/components";
+} from "@mankindui/core/components";
 import {
   HiShoppingCart as ShoppingCartIcon,
   HiOutlineHandThumbUp as ThumbsUpIcon,

@@ -1,4 +1,4 @@
-import { Icon, TabbedCard } from "@fightclub/libtest/components";
+import { Icon, TabbedCard } from "@mankindui/core/components";
 import { HiShoppingCart as ShoppingCartIcon } from "react-icons/hi2";
 import Code from "./code.mdx";
 

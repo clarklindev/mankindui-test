@@ -1,4 +1,4 @@
-import { Popover, TabbedCard } from "@fightclub/libtest/components";
+import { Popover, TabbedCard } from "@mankindui/core/components";
 
 import Code from "./code.mdx";
 

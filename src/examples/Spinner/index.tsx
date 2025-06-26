@@ -1,4 +1,4 @@
-import { Spinner, TabbedCard } from "@fightclub/libtest/components";
+import { Spinner, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const SpinnerExample = () => {

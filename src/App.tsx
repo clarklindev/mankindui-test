@@ -1,7 +1,7 @@
 import "./App.css";
-import { Button, Icon, Navbar } from "@fightclub/libtest/components";
-import { ModeLightIcon, ModeDarkIcon } from "@fightclub/libtest/icons";
-import { useTheme } from "@fightclub/libtest/context";
+import { Button, Icon, Navbar } from "@mankindui/core/components";
+import { ModeLightIcon, ModeDarkIcon } from "@mankindui/core/icons";
+import { useTheme } from "@mankindui/core/context";
 import { useEffect } from "react";
 
 import AccordionExample from "./examples/Accordion";
@@ -52,7 +52,7 @@ const App = () => {
       <div>
         <Navbar className="rounded">
           <Navbar.GroupLeft>
-            <h1 className="text-2xl font-bold">MankindUI Examples</h1>
+            <h1 className="text-2xl font-bold">MankindUI</h1>
           </Navbar.GroupLeft>
 
           <Navbar.GroupRight>

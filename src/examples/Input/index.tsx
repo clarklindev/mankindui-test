@@ -7,7 +7,7 @@ import {
   Input,
   Button,
   TabbedCard,
-} from "@fightclub/libtest/components";
+} from "@mankindui/core/components";
 
 import { HiOutlineChatBubbleLeft as SpeechIcon } from "react-icons/hi2"; //input + icon example
 import {

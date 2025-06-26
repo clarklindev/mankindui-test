@@ -1,7 +1,7 @@
-import { Calendar } from '@fightclub/libtest';;
+import { Calendar } from "@mankindui/core";
 
 const CalendarExample = () => {
-    return <Calendar startDayOfWeek={0} />;
+  return <Calendar startDayOfWeek={0} />;
 };
 
 export default CalendarExample;

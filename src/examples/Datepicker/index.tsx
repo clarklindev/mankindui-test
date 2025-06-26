@@ -1,11 +1,11 @@
-import { Datepicker } from '@fightclub/libtest';
+import { Datepicker } from "@mankindui/core";
 
 const DatepickerExample = () => {
-    return (
-        <>
-            <Datepicker />
-        </>
-    );
+  return (
+    <>
+      <Datepicker />
+    </>
+  );
 };
 
 export default DatepickerExample;

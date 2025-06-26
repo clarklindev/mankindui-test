@@ -1,4 +1,4 @@
-import { TabbedCard, List } from "@fightclub/libtest/components";
+import { TabbedCard, List } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const ListExample = () => {

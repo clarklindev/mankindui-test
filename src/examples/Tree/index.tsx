@@ -1,29 +1,29 @@
 //new
-import { Tree } from '@fightclub/libtest';
+import { Tree } from "@mankindui/core";
 
 // only endnodes can be links
 const TreeExample = () => {
-    const data = [
-        {
-            label: 'A',
-            children: [{ label: 'childroute', path: '/404' }]
-        },
-        {
-            label: 'B',
-            children: [{ label: 'childroute', path: '/404' }]
-        },
-        {
-            label: 'C',
-            children: [{ label: 'childroute', path: '/404' }]
-        }
-    ];
+  const data = [
+    {
+      label: "A",
+      children: [{ label: "childroute", path: "/404" }],
+    },
+    {
+      label: "B",
+      children: [{ label: "childroute", path: "/404" }],
+    },
+    {
+      label: "C",
+      children: [{ label: "childroute", path: "/404" }],
+    },
+  ];
 
-    // requires data to be structured with "label" and "children" properties
-    return (
-        <>
-            <Tree data={data}></Tree>
-        </>
-    );
+  // requires data to be structured with "label" and "children" properties
+  return (
+    <>
+      <Tree data={data}></Tree>
+    </>
+  );
 };
 
 export default TreeExample;

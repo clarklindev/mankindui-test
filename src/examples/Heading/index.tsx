@@ -1,4 +1,4 @@
-import { Heading, TabbedCard } from "@fightclub/libtest/components";
+import { Heading, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const HeadingExample = () => {

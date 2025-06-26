@@ -1,4 +1,4 @@
-import { Navbar, TabbedCard } from "@fightclub/libtest/components";
+import { Navbar, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const NavbarExample = () => {

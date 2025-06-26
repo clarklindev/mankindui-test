@@ -1,4 +1,4 @@
-import { Icon, ToggleButton, TabbedCard } from "@fightclub/libtest/components";
+import { Icon, ToggleButton, TabbedCard } from "@mankindui/core/components";
 import { HiHeart as HeartIcon } from "react-icons/hi2";
 import Code from "./code.mdx";
 

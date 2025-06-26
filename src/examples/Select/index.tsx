@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Select, TabbedCard } from "@fightclub/libtest/components";
+import { Select, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const SelectExample = () => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ToggleSwitch, TabbedCard } from "@fightclub/libtest/components";
+import { ToggleSwitch, TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const ToggleSwitchExample = () => {

@@ -1,5 +1,5 @@
-import { Card } from "@fightclub/libtest";
-import { TabbedCard } from "@fightclub/libtest/components";
+import { Card } from "@mankindui/core";
+import { TabbedCard } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const CardExample = () => {

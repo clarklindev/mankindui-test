@@ -1,4 +1,4 @@
-import { Table, TabbedCard, type Header } from "@fightclub/libtest/components";
+import { Table, TabbedCard, type Header } from "@mankindui/core/components";
 import Code from "./code.mdx";
 
 const TableExample = () => {
