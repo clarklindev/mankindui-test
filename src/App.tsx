@@ -50,9 +50,9 @@ const App = () => {
   return (
     <>
       <div>
-        <Navbar>
+        <Navbar className="rounded">
           <Navbar.GroupLeft>
-            <h1 className="text-2xl font-bold">Mankind UI</h1>
+            <h1 className="text-2xl font-bold">MankindUI Examples</h1>
           </Navbar.GroupLeft>
 
           <Navbar.GroupRight>
