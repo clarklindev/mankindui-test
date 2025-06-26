@@ -52,9 +52,7 @@ const App = () => {
       <div>
         <Navbar>
           <Navbar.GroupLeft>
-            <h1 className="text-3xl bg-red-500 font-bold underline">
-              Vite-lib
-            </h1>
+            <h1 className="text-2xl font-bold">Mankind UI</h1>
           </Navbar.GroupLeft>
 
           <Navbar.GroupRight>
