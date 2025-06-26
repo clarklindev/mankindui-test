@@ -1,11 +1,22 @@
-import { Text } from '@fightclub/libtest';
+import { Text, TabbedCard } from "@fightclub/libtest/components";
+import Code from "./code.mdx";
 
 const TextExample = () => {
-    return (
+  return (
+    <TabbedCard componentName="Text">
+      <TabbedCard.Preview>
         <>
-            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit.
+          </Text>
         </>
-    );
+      </TabbedCard.Preview>
+      <TabbedCard.Code>
+        <Code />
+      </TabbedCard.Code>
+    </TabbedCard>
+  );
 };
 
 export default TextExample;

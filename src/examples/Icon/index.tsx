@@ -1,12 +1,22 @@
-import { Icon } from '@fightclub/libtest';
-import { HiShoppingCart as ShoppingCartIcon } from 'react-icons/hi2';
+import { Icon, TabbedCard } from "@fightclub/libtest/components";
+import { HiShoppingCart as ShoppingCartIcon } from "react-icons/hi2";
+import Code from "./code.mdx";
 
 const IconExample = () => {
-    return (
-        <Icon size="M">
+  return (
+    <TabbedCard componentName="Icon">
+      <TabbedCard.Preview>
+        <>
+          <Icon size="M">
             <ShoppingCartIcon />
-        </Icon>
-    );
+          </Icon>
+        </>
+      </TabbedCard.Preview>
+      <TabbedCard.Code>
+        <Code />
+      </TabbedCard.Code>
+    </TabbedCard>
+  );
 };
 
 export default IconExample;

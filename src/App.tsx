@@ -1,5 +1,5 @@
 import "./App.css";
-import { Button, Card, Icon, Navbar } from "@fightclub/libtest/components";
+import { Button, Icon, Navbar } from "@fightclub/libtest/components";
 import { ModeLightIcon, ModeDarkIcon } from "@fightclub/libtest/icons";
 import { useTheme } from "@fightclub/libtest/context";
 import { useEffect } from "react";
@@ -84,71 +84,23 @@ const App = () => {
       </div>
 
       <AccordionExample />
-
-      <Card>
-        <Card.Title>Card</Card.Title>
-        <Card.Content>
-          <CardExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Input</Card.Title>
-        <Card.Content>
-          <InputExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Avatar</Card.Title>
-        <Card.Content>
-          <AvatarExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Button</Card.Title>
-        <Card.Content>
-          <ButtonExample />
-        </Card.Content>
-      </Card>
-
+      <CardExample />
+      <InputExample />
+      <AvatarExample />
+      <ButtonExample />
+      <IconExample />
+      <CheckboxExample />
+      <CheckboxGroupExample />
+      <HeadingExample />
       {/* <BreadcrumbExample /> */}
 
-      <Card>
-        <Card.Title>Icon</Card.Title>
-        <Card.Content>
-          <IconExample />
-        </Card.Content>
-      </Card>
       {/* 
-            <Card>
-                <Card.Title>Calendar</Card.Title>
-                <Card.Content>
-                    <CalendarExample />
-                </Card.Content>
-            </Card> */}
-
-      <Card>
-        <Card.Title>Checkbox</Card.Title>
-        <Card.Content>
-          <CheckboxExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Checkbox Group</Card.Title>
-        <Card.Content>
-          <CheckboxGroupExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Heading</Card.Title>
-        <Card.Content>
-          <HeadingExample />
-        </Card.Content>
-      </Card>
+        <Card>
+            <Card.Title>Calendar</Card.Title>
+            <Card.Content>
+                <CalendarExample />
+            </Card.Content>
+        </Card> */}
 
       {/* <Card>
                 <Card.Title>Input OTP</Card.Title>
@@ -157,19 +109,9 @@ const App = () => {
                 </Card.Content>
             </Card> */}
 
-      <Card>
-        <Card.Title>Counter</Card.Title>
-        <Card.Content>
-          <CounterExample />
-        </Card.Content>
-      </Card>
+      <CounterExample />
+      <PopoverExample />
 
-      <Card>
-        <Card.Title>Popover</Card.Title>
-        <Card.Content>
-          <PopoverExample />
-        </Card.Content>
-      </Card>
       {/* 
             <Card>
                 <Card.Title>Datepicker</Card.Title>
@@ -177,41 +119,12 @@ const App = () => {
                     <DatepickerExample />
                 </Card.Content>
             </Card> */}
+      <DialogExample />
+      <DividerExample />
+      <DropdownExample />
+      <ListExample />
+      <NavbarExample />
 
-      <Card>
-        <Card.Title>Dialog</Card.Title>
-        <Card.Content>
-          <DialogExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Divider</Card.Title>
-        <Card.Content>
-          <DividerExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Dropdown</Card.Title>
-        <Card.Content>
-          <DropdownExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>List</Card.Title>
-        <Card.Content>
-          <ListExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Navbar</Card.Title>
-        <Card.Content>
-          <NavbarExample />
-        </Card.Content>
-      </Card>
       {/* 
             <Card>
                 <Card.Title>Pagination</Card.Title>
@@ -219,41 +132,11 @@ const App = () => {
                     <PaginationExample />
                 </Card.Content>
             </Card> */}
-
-      <Card>
-        <Card.Title>Progress loader</Card.Title>
-        <Card.Content>
-          <ProgressLoaderExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Radio Button</Card.Title>
-        <Card.Content>
-          <RadioButtonExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Radio Button Group</Card.Title>
-        <Card.Content>
-          <RadioButtonGroupExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Select</Card.Title>
-        <Card.Content>
-          <SelectExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Slider</Card.Title>
-        <Card.Content>
-          <SliderExample />
-        </Card.Content>
-      </Card>
+      <ProgressLoaderExample />
+      <RadioButtonExample />
+      <RadioButtonGroupExample />
+      <SelectExample />
+      <SliderExample />
 
       {/* <Card>
                 <Card.Title>Slider Multi Range</Card.Title>
@@ -261,62 +144,15 @@ const App = () => {
                     <SliderMultiRangeExample />
                 </Card.Content>
             </Card> */}
+      <SnackbarExample />
+      <SpinnerExample />
+      <TableExample />
+      <TabsExample />
+      <TextExample />
+      <TextareaExample />
+      <ToggleButtonExample />
+      <ToggleSwitchExample />
 
-      <Card>
-        <Card.Title>Snackbar</Card.Title>
-        <Card.Content>
-          <SnackbarExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Spinner</Card.Title>
-        <Card.Content>
-          <SpinnerExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Table</Card.Title>
-        <Card.Content>
-          <TableExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Tabs</Card.Title>
-        <Card.Content>
-          <TabsExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Text</Card.Title>
-        <Card.Content>
-          <TextExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Textarea</Card.Title>
-        <Card.Content>
-          <TextareaExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Toggle</Card.Title>
-        <Card.Content>
-          <ToggleButtonExample />
-        </Card.Content>
-      </Card>
-
-      <Card>
-        <Card.Title>Toggle switch</Card.Title>
-        <Card.Content>
-          <ToggleSwitchExample />
-        </Card.Content>
-      </Card>
       {/* <TreeExample /> */}
     </>
   );

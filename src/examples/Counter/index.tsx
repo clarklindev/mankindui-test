@@ -1,11 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { Counter } from '@fightclub/libtest';
+import { Counter, TabbedCard } from "@fightclub/libtest/components";
+
+import Code from "./code.mdx";
 
 const CounterExample = () => {
-    const [savedData, setSavedData] = useState(0);
+  const [savedData, setSavedData] = useState(0);
 
-    return <Counter savedData={savedData} onChange={(newValue) => setSavedData(newValue)} />;
+  return (
+    <TabbedCard componentName="Counter">
+      <TabbedCard.Preview>
+        <>
+          <Counter
+            savedData={savedData}
+            onChange={(newValue) => setSavedData(newValue)}
+          />
+        </>
+      </TabbedCard.Preview>
+      <TabbedCard.Code>
+        <Code />
+      </TabbedCard.Code>
+    </TabbedCard>
+  );
 };
 
 export default CounterExample;

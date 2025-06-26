@@ -1,5 +1,5 @@
-import { Table, TabbedCard, type Header } from "@fightclub/libtest/components";
-import Code from "./code.mdx";
+```tsx
+import type { Table, Header } from "@fightclub/libtest/components";
 
 const TableExample = () => {
   const configure = {
@@ -60,17 +60,11 @@ const TableExample = () => {
   ];
 
   return (
-    <TabbedCard componentName="Table">
-      <TabbedCard.Preview>
-        <>
-          <Table headers={HEADERS} data={DATA} configure={configure} />
-        </>
-      </TabbedCard.Preview>
-      <TabbedCard.Code>
-        <Code />
-      </TabbedCard.Code>
-    </TabbedCard>
+    <>
+      <Table headers={HEADERS} data={DATA} configure={configure} />
+    </>
   );
 };
 
 export default TableExample;
+```

@@ -1,5 +1,5 @@
-import { TabbedCard, List } from "@fightclub/libtest/components";
-import Code from "./code.mdx";
+```tsx
+import { List } from "@fightclub/libtest";
 
 const ListExample = () => {
   const DATA = [
@@ -47,25 +47,17 @@ const ListExample = () => {
   };
 
   return (
-    <TabbedCard componentName="List">
-      <TabbedCard.Preview>
-        <>
-          <List>
-            {DATA.map((item, index) => {
-              return (
-                <List.ListItem key={index} className="pb-5">
-                  <CustomItem {...item} />
-                </List.ListItem>
-              );
-            })}
-          </List>
-        </>
-      </TabbedCard.Preview>
-      <TabbedCard.Code>
-        <Code />
-      </TabbedCard.Code>
-    </TabbedCard>
+    <List>
+      {DATA.map((item, index) => {
+        return (
+          <List.ListItem key={index} className="pb-5">
+            <CustomItem {...item} />
+          </List.ListItem>
+        );
+      })}
+    </List>
   );
 };
 
 export default ListExample;
+```
