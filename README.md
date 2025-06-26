@@ -46,3 +46,10 @@ This is a paragraph.
 console.log("highlight me");
 ```
 ````
+
+## @shikijs/rehype
+
+```
+npm install -D shiki
+npm i -D @shikijs/rehype
+```

@@ -1,4 +1,4 @@
-```jsx
+```tsx
 import { Icon, Accordion } from "@fightclub/libtest/components";
 
 import {
@@ -10,37 +10,22 @@ import {
 
 const data = [
   {
-    title: "helloworld",
-    body: (
-      <>
-        {`this is my first answer`}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        {`hi`}
-      </>
-    ),
+    title: "1. Lorem ipsum dolor sit amet",
+    body: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   },
   {
-    title: "rainbow",
-    body: "rainbows are amazing",
+    title: "2. Lorem ipsum dolor sit amet",
+    body: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   },
   {
-    title: "sun",
-    body: "the sun is amazing",
+    title: "3. Lorem ipsum dolor sit amet",
+    body: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   },
 ];
 
 type AccordionDataType = {
-  title: string,
-  body: React.ReactElement | string,
+  title: string;
+  body: React.ReactElement | string;
 };
 
 const AccordionExample = () => {

@@ -2,3 +2,12 @@
 /* https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually */
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+/* code block wrapping */
+@layer base {
+  code span {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}

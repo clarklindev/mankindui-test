@@ -1,9 +1,6 @@
 import "./App.css";
-import { Button, Card, Icon, Navbar } from "@fightclub/libtest";
-import {
-  HiOutlineSun as ModeLightIcon,
-  HiOutlineMoon as ModeDarkIcon,
-} from "react-icons/hi2";
+import { Button, Card, Icon, Navbar } from "@fightclub/libtest/components";
+import { ModeLightIcon, ModeDarkIcon } from "@fightclub/libtest/icons";
 import { useTheme } from "@fightclub/libtest/context";
 import { useEffect } from "react";
 
@@ -42,8 +39,6 @@ import IconExample from "./examples/Icon";
 import ButtonExample from "./examples/Button";
 import AvatarExample from "./examples/Avatar";
 // import TreeExample from './examples/Tree';
-
-import Code from "./examples/Accordion/code.mdx";
 
 const App = () => {
   const { colorScheme, setColorScheme } = useTheme();
@@ -87,15 +82,8 @@ const App = () => {
           </Navbar.GroupRight>
         </Navbar>
       </div>
-      <Card className="mt-2">
-        <Card.Title>Accordion</Card.Title>
-        <Card.Content>
-          <>
-            <AccordionExample />
-            <Code />
-          </>
-        </Card.Content>
-      </Card>
+
+      <AccordionExample />
 
       <Card>
         <Card.Title>Card</Card.Title>
