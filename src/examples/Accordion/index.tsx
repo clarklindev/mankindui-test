@@ -5,7 +5,7 @@ import {
   ChevronUpIcon,
   MinusIcon,
   PlusIcon,
-} from "../../icons";
+} from "@mankindui/core/icons";
 
 import Code from "./code.mdx";
 

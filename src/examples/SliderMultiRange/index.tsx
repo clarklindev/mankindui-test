@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SliderMultiRange } from "@mankindui/core";
+import { SliderMultiRange } from "@mankindui/core/components";
 
 const SliderMultiRangeExample = () => {
   const [sliderValues, setSliderValues] = useState([0, 20, 40]); //holds positions of sliders

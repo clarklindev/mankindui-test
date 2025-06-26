@@ -1,4 +1,4 @@
-import { InputOtp } from "@mankindui/core";
+import { InputOtp } from "@mankindui/core/components";
 
 const InputOtpExample = () => {
   return (

@@ -1,5 +1,5 @@
 //new
-import { Tree } from "@mankindui/core";
+import { Tree } from "@mankindui/core/components";
 
 // only endnodes can be links
 const TreeExample = () => {

@@ -1,4 +1,4 @@
-import { Avatar, Layout, TabbedCard } from "@mankindui/core";
+import { Avatar, Layout, TabbedCard } from "@mankindui/core/components";
 import avatar1 from "../../assets/avatar1.png";
 
 import Code from "./code.mdx";
