@@ -1,5 +1,16 @@
  #root {
     /* max-width: 1280px; */
     margin: 0 auto;
-    padding: 1rem;
 } 
+
+.padded {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .padded {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

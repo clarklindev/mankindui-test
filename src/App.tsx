@@ -1,8 +1,4 @@
 import "./App.css";
-import { Button, Icon, Navbar } from "@mankindui/core/components";
-import { ModeLightIcon, ModeDarkIcon } from "@mankindui/core/icons";
-import { useTheme } from "@mankindui/core/context";
-import { useEffect } from "react";
 
 import AccordionExample from "./examples/Accordion";
 import InputExample from "./examples/Input";
@@ -38,61 +34,29 @@ import CheckboxExample from "./examples/Checkbox";
 import IconExample from "./examples/Icon";
 import ButtonExample from "./examples/Button";
 import AvatarExample from "./examples/Avatar";
+import { CodeBlock } from "@mankindui/core/components";
+
 // import TreeExample from './examples/Tree';
 
 const App = () => {
-  const { colorScheme, setColorScheme } = useTheme();
-
-  useEffect(() => {
-    console.log("darkmode: ", colorScheme);
-  }, [colorScheme]);
-
   return (
     <>
-      <div>
-        <Navbar className="rounded">
-          <Navbar.GroupLeft>
-            <h1 className="text-2xl font-bold">MankindUI</h1>
-          </Navbar.GroupLeft>
+      <div className="padded">
+        <div className="border rounded-lg flex items-center h-20 p-5 ">
+          <CodeBlock>npm i @mankindui/core</CodeBlock>
+        </div>
+        <AccordionExample />
+        <CardExample />
+        <InputExample />
+        <AvatarExample />
+        <ButtonExample />
+        <IconExample />
+        <CheckboxExample />
+        <CheckboxGroupExample />
+        <HeadingExample />
+        {/* <BreadcrumbExample /> */}
 
-          <Navbar.GroupRight>
-            {colorScheme === "dark" ? (
-              <Button
-                intent="outlined-nohover"
-                padding="S"
-                onClick={() => setColorScheme("light")}
-              >
-                <Icon size="L">
-                  <ModeDarkIcon />
-                </Icon>
-              </Button>
-            ) : (
-              <Button
-                intent="outlined-nohover"
-                padding="S"
-                onClick={() => setColorScheme("dark")}
-              >
-                <Icon size="L">
-                  <ModeLightIcon />
-                </Icon>
-              </Button>
-            )}
-          </Navbar.GroupRight>
-        </Navbar>
-      </div>
-
-      <AccordionExample />
-      <CardExample />
-      <InputExample />
-      <AvatarExample />
-      <ButtonExample />
-      <IconExample />
-      <CheckboxExample />
-      <CheckboxGroupExample />
-      <HeadingExample />
-      {/* <BreadcrumbExample /> */}
-
-      {/* 
+        {/* 
         <Card>
             <Card.Title>Calendar</Card.Title>
             <Card.Content>
@@ -100,58 +64,59 @@ const App = () => {
             </Card.Content>
         </Card> */}
 
-      {/* <Card>
+        {/* <Card>
                 <Card.Title>Input OTP</Card.Title>
                 <Card.Content>
                     <InputOtpExample />
                 </Card.Content>
             </Card> */}
 
-      <CounterExample />
-      <PopoverExample />
+        <CounterExample />
+        <PopoverExample />
 
-      {/* 
+        {/* 
             <Card>
                 <Card.Title>Datepicker</Card.Title>
                 <Card.Content>
                     <DatepickerExample />
                 </Card.Content>
             </Card> */}
-      <DialogExample />
-      <DividerExample />
-      <DropdownExample />
-      <ListExample />
-      <NavbarExample />
+        <DialogExample />
+        <DividerExample />
+        <DropdownExample />
+        <ListExample />
+        <NavbarExample />
 
-      {/* 
+        {/* 
             <Card>
                 <Card.Title>Pagination</Card.Title>
                 <Card.Content>
                     <PaginationExample />
                 </Card.Content>
             </Card> */}
-      <ProgressLoaderExample />
-      <RadioButtonExample />
-      <RadioButtonGroupExample />
-      <SelectExample />
-      <SliderExample />
+        <ProgressLoaderExample />
+        <RadioButtonExample />
+        <RadioButtonGroupExample />
+        <SelectExample />
+        <SliderExample />
 
-      {/* <Card>
+        {/* <Card>
                 <Card.Title>Slider Multi Range</Card.Title>
                 <Card.Content>
                     <SliderMultiRangeExample />
                 </Card.Content>
             </Card> */}
-      <SnackbarExample />
-      <SpinnerExample />
-      <TableExample />
-      <TabsExample />
-      <TextExample />
-      <TextareaExample />
-      <ToggleButtonExample />
-      <ToggleSwitchExample />
+        <SnackbarExample />
+        <SpinnerExample />
+        <TableExample />
+        <TabsExample />
+        <TextExample />
+        <TextareaExample />
+        <ToggleButtonExample />
+        <ToggleSwitchExample />
 
-      {/* <TreeExample /> */}
+        {/* <TreeExample /> */}
+      </div>
     </>
   );
 };
