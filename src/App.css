@@ -10,7 +10,23 @@
 
 @media (min-width: 768px) {
   .padded {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 100px;
+    padding-right: 100px;
   }
+}
+
+@media (min-width: 992px)
+{
+ .padded {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (min-width: 1200px){
+  .padded {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
 }
