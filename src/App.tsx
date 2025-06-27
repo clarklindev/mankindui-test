@@ -42,8 +42,10 @@ const App = () => {
   return (
     <>
       <div className="padded">
-        <div className="border rounded-lg flex items-center h-20 p-5 ">
-          <CodeBlock>npm i @mankindui/core</CodeBlock>
+        <div className="border rounded-lg flex items-center h-20 p-5 mb-10">
+          <CodeBlock darkIcon="black" lightIcon="white">
+            npm i @mankindui/core
+          </CodeBlock>
         </div>
         <AccordionExample />
         <CardExample />
