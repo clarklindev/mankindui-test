@@ -1,7 +1,8 @@
 import { Button, Icon, Navbar } from "@mankindui/core/components";
-import { ModeLightIcon, ModeDarkIcon } from "@mankindui/core/icons";
+import { ModeLightIcon, ModeDarkIcon, GithubIcon } from "@mankindui/core/icons";
 import { useTheme } from "@mankindui/core/context";
 import { useEffect } from "react";
+import { Link } from "react-router";
 
 function Header() {
   const { colorScheme, setColorScheme } = useTheme();
@@ -18,27 +19,41 @@ function Header() {
         </Navbar.GroupLeft>
 
         <Navbar.GroupRight>
-          {colorScheme === "dark" ? (
-            <Button
-              intent="outlined-nohover"
-              padding="S"
-              onClick={() => setColorScheme("light")}
+          <div className="flex items-center gap-2">
+            <Link
+              to="https://github.com/clarklindev/mankindui"
+              target="_blank"
+              aria-label="github repo"
             >
-              <Icon size="L">
-                <ModeDarkIcon />
+              <Icon size="M">
+                <GithubIcon className="dark:stroke-white dark:fill-white stroke-black fill-black" />
               </Icon>
-            </Button>
-          ) : (
-            <Button
-              intent="outlined-nohover"
-              padding="S"
-              onClick={() => setColorScheme("dark")}
-            >
-              <Icon size="L">
-                <ModeLightIcon />
-              </Icon>
-            </Button>
-          )}
+            </Link>
+
+            <>
+              {colorScheme === "dark" ? (
+                <Button
+                  intent="outlined-nohover"
+                  padding="S"
+                  onClick={() => setColorScheme("light")}
+                >
+                  <Icon size="L">
+                    <ModeDarkIcon />
+                  </Icon>
+                </Button>
+              ) : (
+                <Button
+                  intent="outlined-nohover"
+                  padding="S"
+                  onClick={() => setColorScheme("dark")}
+                >
+                  <Icon size="L">
+                    <ModeLightIcon />
+                  </Icon>
+                </Button>
+              )}
+            </>
+          </div>
         </Navbar.GroupRight>
       </Navbar>
     </div>
