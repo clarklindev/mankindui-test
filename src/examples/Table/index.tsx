@@ -1,5 +1,4 @@
-import { Table, TabbedCard } from "@mankindui/core";
-import { type Header } from "@mankindui/core/components";
+import { Table, TabbedCard, type Header } from "@mankindui/core";
 
 import Code from "./code.mdx";
 
