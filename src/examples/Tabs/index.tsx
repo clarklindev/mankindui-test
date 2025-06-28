@@ -1,4 +1,4 @@
-import { Tabs, TabbedCard } from "@mankindui/core/components";
+import { Tabs, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const TabsExample = () => {

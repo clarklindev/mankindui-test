@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { HiOutlineClipboardDocument as ClipboardIcon } from "react-icons/hi2";
-import { Snackbar, Button, Icon, TabbedCard } from "@mankindui/core/components";
+import { Snackbar, Button, Icon, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const SnackbarExample = () => {

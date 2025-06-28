@@ -1,4 +1,4 @@
-import { Datepicker } from "@mankindui/core/components";
+import { Datepicker } from "@mankindui/core";
 
 const DatepickerExample = () => {
   return (

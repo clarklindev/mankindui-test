@@ -1,4 +1,4 @@
-import { Breadcrumb } from "@mankindui/core/components";
+import { Breadcrumb } from "@mankindui/core";
 
 //example: https://example.com/products/shoes/nike
 

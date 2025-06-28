@@ -1,4 +1,4 @@
-import { Icon, ToggleButton, TabbedCard } from "@mankindui/core/components";
+import { Icon, ToggleButton, TabbedCard } from "@mankindui/core";
 import { HiHeart as HeartIcon } from "react-icons/hi2";
 import Code from "./code.mdx";
 

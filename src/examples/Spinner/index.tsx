@@ -1,4 +1,4 @@
-import { Spinner, TabbedCard } from "@mankindui/core/components";
+import { Spinner, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const SpinnerExample = () => {

@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  Checkbox,
-  Label,
-  Layout,
-  Heading,
-  TabbedCard,
-} from "@mankindui/core/components";
+import { Checkbox, Label, Layout, Heading, TabbedCard } from "@mankindui/core";
 
 import Code from "./code.mdx";
 

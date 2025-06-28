@@ -1,4 +1,4 @@
-import { Textarea, TabbedCard } from "@mankindui/core/components";
+import { Textarea, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const TextareaExample = () => {

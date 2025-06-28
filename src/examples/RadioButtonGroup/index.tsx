@@ -7,7 +7,7 @@ import {
   RadioButton,
   Label,
   TabbedCard,
-} from "@mankindui/core/components";
+} from "@mankindui/core";
 import Code from "./code.mdx";
 
 const RadioButtonGroupExample = () => {

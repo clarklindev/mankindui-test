@@ -1,4 +1,4 @@
-import { Icon, Accordion, TabbedCard } from "@mankindui/core/components";
+import { Icon, Accordion, TabbedCard } from "@mankindui/core";
 
 import {
   ChevronDownIcon,

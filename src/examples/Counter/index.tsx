@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Counter, TabbedCard } from "@mankindui/core/components";
+import { Counter, TabbedCard } from "@mankindui/core";
 
 import Code from "./code.mdx";
 

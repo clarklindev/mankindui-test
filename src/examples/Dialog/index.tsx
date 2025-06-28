@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dialog, TabbedCard } from "@mankindui/core/components";
+import { Dialog, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const DialogExample = () => {

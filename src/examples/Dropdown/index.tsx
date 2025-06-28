@@ -1,4 +1,4 @@
-import { TabbedCard } from "@mankindui/core/components";
+import { TabbedCard } from "@mankindui/core";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Slider, TabbedCard } from "@mankindui/core/components";
+import { Slider, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const SliderExample = () => {

@@ -1,10 +1,4 @@
-import {
-  Button,
-  Icon,
-  Label,
-  Layout,
-  TabbedCard,
-} from "@mankindui/core/components";
+import { Button, Icon, Label, Layout, TabbedCard } from "@mankindui/core";
 import {
   HiShoppingCart as ShoppingCartIcon,
   HiOutlineHandThumbUp as ThumbsUpIcon,

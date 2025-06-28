@@ -1,4 +1,4 @@
-import { Text, TabbedCard } from "@mankindui/core/components";
+import { Text, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const TextExample = () => {

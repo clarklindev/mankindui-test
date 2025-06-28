@@ -1,5 +1,5 @@
 import { Card } from "@mankindui/core";
-import { TabbedCard } from "@mankindui/core/components";
+import { TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const CardExample = () => {

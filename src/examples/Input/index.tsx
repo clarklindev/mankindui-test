@@ -7,7 +7,7 @@ import {
   Input,
   Button,
   TabbedCard,
-} from "@mankindui/core/components";
+} from "@mankindui/core";
 
 import { HiOutlineChatBubbleLeft as SpeechIcon } from "react-icons/hi2"; //input + icon example
 import {

@@ -1,4 +1,4 @@
-import { Popover, TabbedCard } from "@mankindui/core/components";
+import { Popover, TabbedCard } from "@mankindui/core";
 
 import Code from "./code.mdx";
 

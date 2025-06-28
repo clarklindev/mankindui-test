@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { RadioButton, TabbedCard } from "@mankindui/core/components";
+import { RadioButton, TabbedCard } from "@mankindui/core";
 import Code from "./code.mdx";
 
 const RadioButtonExample = () => {

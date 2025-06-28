@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Pagination } from "@mankindui/core/components";
+import { Pagination } from "@mankindui/core";
 
 interface Post {
   id: number;
