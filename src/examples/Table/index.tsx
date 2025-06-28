@@ -1,4 +1,6 @@
-import { Table, TabbedCard, type Header } from "@mankindui/core";
+import { Table, TabbedCard } from "@mankindui/core";
+import { type Header } from "@mankindui/core/components";
+
 import Code from "./code.mdx";
 
 const TableExample = () => {
