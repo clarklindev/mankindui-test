@@ -67,7 +67,7 @@ const App = () => {
             npm create vite@latest
           </CodeBlock>
         </div>
-        <Text>Select 'React' framework</Text>
+        <Text>Select framework: 'React'</Text>
         <Text>Select variant: 'Typescript'</Text>
 
         <div className="border rounded-lg flex items-center h-20 p-5 mt-10 mb-10">

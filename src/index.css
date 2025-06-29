@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 /* https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually */
 
+/* DONT REMOVE THIS */
 @custom-variant dark (&:where(.dark, .dark *));
 
 
