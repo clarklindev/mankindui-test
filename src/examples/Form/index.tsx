@@ -12,7 +12,7 @@ import {
   TabbedCard,
 } from "@mankindui/core";
 import { useState } from "react";
-import { z } from "zod";
+import * as z from "zod/v4";
 
 import Code from "./Code.mdx";
 
