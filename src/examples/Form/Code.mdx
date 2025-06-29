@@ -10,8 +10,12 @@ import {
   Layout,
   RadioButton,
   Select,
+  TabbedCard,
 } from "@mankindui/core";
 import { useState } from "react";
+import * as z from "zod/v4";
+
+import Code from "./Code.mdx";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -21,6 +25,22 @@ export default function Form() {
   const [workExperience, setWorkExperience] = useState(0);
   const [favoriteColor, setFavoriteColor] = useState(Array(4).fill(false));
   const [driversLicense, setDriversLicense] = useState<string | null>();
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  const formSchema = z.object({
+    name: z.string().min(1, "Name is required"),
+    surname: z.string().min(1, "Surname is required"),
+    email: z.string().email("Invalid email address"),
+    newsLetter: z.boolean(),
+    workExperience: z.number().min(0, "Work experience must be 0 or more"),
+    favoriteColor: z.enum(["red", "blue", "yellow", "other"]),
+    driversLicense: z
+      .enum(["yes", "no"])
+      .nullable()
+      .refine((val: "yes" | "no" | null) => val !== null, {
+        message: "Please select a valid option",
+      }),
+  });
 
   const handleRadioChange = (
     savedData: Array<boolean>,
@@ -47,21 +67,40 @@ export default function Form() {
       newsLetter,
       workExperience,
       favoriteColor: selectedColor,
-      driversLicense,
+      driversLicense: driversLicense || null,
     };
 
+    const result = formSchema.safeParse(formData);
+
+    if (!result.success) {
+      // Show validation errors
+      const formatted = result.error.format();
+      setFormErrors({
+        name: formatted.name?._errors?.[0] || "",
+        surname: formatted.surname?._errors?.[0] || "",
+        email: formatted.email?._errors?.[0] || "",
+        workExperience: formatted.workExperience?._errors?.[0] || "",
+        favoriteColor: formatted.favoriteColor?._errors?.[0] || "",
+        driversLicense: formatted.driversLicense?._errors?.[0] || "",
+      });
+      return;
+    }
+
     console.log("Form submitted:", formData);
+
+    setFormErrors({});
   };
 
   return (
     <>
       <Layout className="flex justify-center">
-        <div className="border border-gray-400/50 min-h-30 w-150 flex justify-center flex-col p-5 m-15 rounded-xl">
+        <div className="border border-gray-400/50 min-h-30 w-full md:w-150 flex justify-center flex-col p-5 m-3 md:m-15 lg:m-30 rounded-xl">
           <Heading as="h2" className="text-2xl mb-6">
             Details page
           </Heading>
 
           <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
+            {/* Name */}
             <div>
               <Heading as="h5" className="text-l mb-2">
                 Name
@@ -72,11 +111,16 @@ export default function Form() {
                   value={name}
                   onChange={(event) => {
                     setName(event.target.value);
+                    setFormErrors((prev) => ({ ...prev, name: "" }));
                   }}
                 />
               </Input>
+              {formErrors.name && (
+                <p className="text-red-500">{formErrors.name}</p>
+              )}
             </div>
 
+            {/* Surname */}
             <div>
               <Heading as="h5" className="text-l mb-2">
                 Surname
@@ -87,11 +131,16 @@ export default function Form() {
                   value={surname}
                   onChange={(event) => {
                     setSurname(event.target.value);
+                    setFormErrors((prev) => ({ ...prev, surname: "" }));
                   }}
                 />
               </Input>
+              {formErrors.surname && (
+                <p className="text-red-500">{formErrors.surname}</p>
+              )}
             </div>
 
+            {/* Email */}
             <div>
               <Heading as="h5" className="text-l mb-2">
                 Email
@@ -102,11 +151,16 @@ export default function Form() {
                   value={email}
                   onChange={(event) => {
                     setEmail(event.target.value);
+                    setFormErrors((prev) => ({ ...prev, email: "" }));
                   }}
                 />
               </Input>
+              {formErrors.email && (
+                <p className="text-red-500">{formErrors.email}</p>
+              )}
             </div>
 
+            {/* Newsletter */}
             <div>
               <Heading as="h5" className="text-l mb-2">
                 Newsletter
@@ -127,57 +181,73 @@ export default function Form() {
               </Label>
             </div>
 
+            {/* Work Experience */}
             <div>
               <Heading as="h5" className="text-l mb-2">
                 How many years of work experience?
               </Heading>
               <Counter
                 savedData={workExperience}
-                onChange={(newValue) => setWorkExperience(newValue)}
+                onChange={(newValue) => {
+                  setWorkExperience(newValue);
+                  setFormErrors((prev) => ({
+                    ...prev,
+                    workExperience: "",
+                  }));
+                }}
               />
+              {formErrors.workExperience && (
+                <p className="text-red-500">{formErrors.workExperience}</p>
+              )}
             </div>
 
+            {/* Favorite Color */}
             <div>
               <Heading as="h5">Your favorite color</Heading>
-
               <div className="flex flex-col space-y-5">
-                {[
-                  { label: "red", value: "red" },
-                  { label: "blue", value: "blue" },
-                  { label: "yellow", value: "yellow" },
-                  { label: "other", value: "other" },
-                ].map((each, index) => {
-                  return (
-                    <Label
-                      key={"RadioButtonGroupB" + index}
-                      label={each.label}
-                      labelDirection="right"
-                    >
-                      <RadioButton
-                        checked={favoriteColor[index]}
-                        name="RadioB"
-                        size="XL"
-                        onChange={() =>
-                          handleRadioChange(
-                            favoriteColor,
-                            setFavoriteColor,
-                            index
-                          )
-                        }
-                      />
-                    </Label>
-                  );
-                })}
+                {["red", "blue", "yellow", "other"].map((color, index) => (
+                  <Label
+                    key={`RadioButtonGroupB-${index}`}
+                    label={color}
+                    labelDirection="right"
+                  >
+                    <RadioButton
+                      checked={favoriteColor[index]}
+                      name="RadioB"
+                      size="XL"
+                      onChange={() => {
+                        handleRadioChange(
+                          favoriteColor,
+                          setFavoriteColor,
+                          index
+                        );
+                        setFormErrors((prev) => ({
+                          ...prev,
+                          favoriteColor: "",
+                        }));
+                      }}
+                    />
+                  </Label>
+                ))}
               </div>
+              {formErrors.favoriteColor && (
+                <p className="text-red-500">{formErrors.favoriteColor}</p>
+              )}
             </div>
 
+            {/* Drivers License */}
             <div>
               <Heading as="h5">Drivers license</Heading>
-
               <Select>
                 <Select.SelectElement
                   savedData={driversLicense}
-                  onChange={(event) => setDriversLicense(event.target.value)}
+                  onChange={(event) => {
+                    setDriversLicense(event.target.value);
+                    setFormErrors((prev) => ({
+                      ...prev,
+                      driversLicense: "",
+                    }));
+                  }}
                 >
                   {[
                     { value: "option0", text: "Select an option" },
@@ -191,6 +261,9 @@ export default function Form() {
                 </Select.SelectElement>
                 <Select.SelectIcon></Select.SelectIcon>
               </Select>
+              {formErrors.driversLicense && (
+                <p className="text-red-500">{formErrors.driversLicense}</p>
+              )}
             </div>
 
             <Divider variation="horizontal" />
