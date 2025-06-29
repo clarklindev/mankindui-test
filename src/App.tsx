@@ -35,6 +35,7 @@ import IconExample from "./examples/Icon";
 import ButtonExample from "./examples/Button";
 import AvatarExample from "./examples/Avatar";
 import { CodeBlock } from "@mankindui/core/components";
+import { Heading, Layout, Text } from "@mankindui/core";
 
 // import TreeExample from './examples/Tree';
 
@@ -42,82 +43,127 @@ const App = () => {
   return (
     <>
       <div className="padded">
-        <div className="border rounded-lg flex items-center h-20 p-5 mb-10">
+        <Layout>
+          <Heading as="h2" className="text-2xl">
+            Introduction
+          </Heading>
+          <Text>
+            MankindUI is a React component library built from the ground up for
+            an easier developer experience. The goal of this library is to
+            combine the user-friendly modular approach of customizing with
+            compound components while leveraging TailwindCSS (known for its
+            well-documented utility-first library of reusable classes)
+          </Text>
+        </Layout>
+        <Layout>
+          <Heading as="h2" className="text-2xl">
+            Installation
+          </Heading>
+          <Text></Text>
+        </Layout>
+
+        <div className="border rounded-lg flex items-center h-20 p-5">
+          <CodeBlock darkIcon="black" lightIcon="white">
+            npm create vite@latest
+          </CodeBlock>
+        </div>
+        <Text>Select 'React' framework</Text>
+        <Text>Select variant: 'Typescript'</Text>
+
+        <div className="border rounded-lg flex items-center h-20 p-5 mt-10 mb-10">
           <CodeBlock darkIcon="black" lightIcon="white">
             npm i @mankindui/core
           </CodeBlock>
         </div>
-        <AccordionExample />
-        <CardExample />
-        <InputExample />
-        <AvatarExample />
-        <ButtonExample />
-        <IconExample />
-        <CheckboxExample />
-        <CheckboxGroupExample />
-        <HeadingExample />
-        {/* <BreadcrumbExample /> */}
 
-        {/* 
-        <Card>
-            <Card.Title>Calendar</Card.Title>
-            <Card.Content>
-                <CalendarExample />
-            </Card.Content>
-        </Card> */}
+        <div className="border rounded-lg flex items-center h-20 p-5">
+          <CodeBlock darkIcon="black" lightIcon="white">
+            npm i tailwindcss @tailwindcss/vite
+          </CodeBlock>
+        </div>
+        <Text>
+          Setup tailwindcss -{" "}
+          <a href="https://tailwindcss.com/docs/installation/using-vite">
+            ( https://tailwindcss.com/docs/installation/using-vite )
+          </a>
+        </Text>
 
-        {/* <Card>
+        <Layout className="mt-10">
+          <Heading as="h2" className="text-2xl">
+            Examples
+          </Heading>
+          <AccordionExample />
+          <CardExample />
+          <InputExample />
+          <AvatarExample />
+          <ButtonExample />
+          <IconExample />
+          <CheckboxExample />
+          <CheckboxGroupExample />
+          <HeadingExample />
+          {/* <BreadcrumbExample /> */}
+
+          {/* 
+          <Card>
+              <Card.Title>Calendar</Card.Title>
+              <Card.Content>
+                  <CalendarExample />
+              </Card.Content>
+          </Card> */}
+
+          {/* <Card>
                 <Card.Title>Input OTP</Card.Title>
                 <Card.Content>
                     <InputOtpExample />
                 </Card.Content>
             </Card> */}
 
-        <CounterExample />
-        <PopoverExample />
+          <CounterExample />
+          <PopoverExample />
 
-        {/* 
+          {/* 
             <Card>
                 <Card.Title>Datepicker</Card.Title>
                 <Card.Content>
                     <DatepickerExample />
                 </Card.Content>
             </Card> */}
-        <DialogExample />
-        <DividerExample />
-        <DropdownExample />
-        <ListExample />
-        <NavbarExample />
+          <DialogExample />
+          <DividerExample />
+          <DropdownExample />
+          <ListExample />
+          <NavbarExample />
 
-        {/* 
+          {/* 
             <Card>
                 <Card.Title>Pagination</Card.Title>
                 <Card.Content>
                     <PaginationExample />
                 </Card.Content>
             </Card> */}
-        <ProgressLoaderExample />
-        <RadioButtonExample />
-        <RadioButtonGroupExample />
-        <SelectExample />
-        <SliderExample />
+          <ProgressLoaderExample />
+          <RadioButtonExample />
+          <RadioButtonGroupExample />
+          <SelectExample />
+          <SliderExample />
 
-        {/* <Card>
+          {/* <Card>
                 <Card.Title>Slider Multi Range</Card.Title>
                 <Card.Content>
                     <SliderMultiRangeExample />
                 </Card.Content>
             </Card> */}
-        <SnackbarExample />
-        <SpinnerExample />
-        <TableExample />
-        <TabsExample />
-        <TextExample />
-        <TextareaExample />
-        <ToggleButtonExample />
-        <ToggleSwitchExample />
+          <SnackbarExample />
+          <SpinnerExample />
+          <TableExample />
+          <TabsExample />
+          <TextExample />
+          <TextareaExample />
+          <ToggleButtonExample />
+          <ToggleSwitchExample />
 
-        {/* <TreeExample /> */}
+          {/* <TreeExample /> */}
+        </Layout>
       </div>
     </>
   );

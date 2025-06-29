@@ -13,9 +13,11 @@ function Header() {
 
   return (
     <div>
-      <Navbar className="mb-10">
+      <Navbar className="mb-10 fixed z-40">
         <Navbar.GroupLeft>
-          <h1 className="text-2xl font-bold">MankindUI</h1>
+          <Link to="/">
+            <h1 className="text-2xl font-bold">MankindUI</h1>
+          </Link>
         </Navbar.GroupLeft>
 
         <Navbar.GroupRight>

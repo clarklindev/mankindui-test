@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import App from "./App";
-import MainLayout from "./MainLayout.tsx";
+import MainLayout from "./layouts/MainLayout.tsx";
 
 const router = createBrowserRouter([
   {
