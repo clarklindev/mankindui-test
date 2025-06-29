@@ -6,11 +6,15 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import App from "./App";
 import MainLayout from "./layouts/MainLayout.tsx";
+import FormExample from "./examples/Form";
 
 const router = createBrowserRouter([
   {
     Component: MainLayout,
-    children: [{ index: true, Component: App }],
+    children: [
+      { index: true, Component: App },
+      { path: "/form", Component: FormExample },
+    ],
   },
 ]);
 

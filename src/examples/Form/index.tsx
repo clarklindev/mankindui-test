@@ -1,0 +1,217 @@
+import {
+  Button,
+  Checkbox,
+  Counter,
+  Divider,
+  Heading,
+  Input,
+  Label,
+  Layout,
+  RadioButton,
+  Select,
+  TabbedCard,
+} from "@mankindui/core";
+import { useState } from "react";
+
+import Code from "./Code.mdx";
+
+export default function Form() {
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [email, setEmail] = useState("");
+  const [newsLetter, setNewsLetter] = useState(false);
+  const [workExperience, setWorkExperience] = useState(0);
+  const [favoriteColor, setFavoriteColor] = useState(Array(4).fill(false));
+  const [driversLicense, setDriversLicense] = useState<string | null>();
+
+  const handleRadioChange = (
+    savedData: Array<boolean>,
+    updateSavedData: (newData: Array<boolean>) => void,
+    index: number
+  ) => {
+    const newValues = [...savedData].fill(false);
+    newValues[index] = true;
+    updateSavedData(newValues);
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    console.log("Form submitted");
+    const selectedColorIndex = favoriteColor.findIndex((val) => val);
+    const selectedColor =
+      ["red", "blue", "yellow", "other"][selectedColorIndex] || null;
+
+    const formData = {
+      name,
+      surname,
+      email,
+      newsLetter,
+      workExperience,
+      favoriteColor: selectedColor,
+      driversLicense,
+    };
+
+    console.log("Form submitted:", formData);
+  };
+
+  return (
+    <TabbedCard componentName="Form Example">
+      <TabbedCard.Preview>
+        <>
+          <Layout className="flex justify-center">
+            <div className="border min-h-30 w-150 flex justify-center flex-col p-5 m-15 rounded-xl">
+              <Heading as="h2" className="text-2xl mb-6">
+                Details page
+              </Heading>
+
+              <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
+                <div>
+                  <Heading as="h5" className="text-l mb-2">
+                    Name
+                  </Heading>
+                  <Input>
+                    <Input.InputElement
+                      name="name"
+                      value={name}
+                      onChange={(event) => {
+                        setName(event.target.value);
+                      }}
+                    />
+                  </Input>
+                </div>
+
+                <div>
+                  <Heading as="h5" className="text-l mb-2">
+                    Surname
+                  </Heading>
+                  <Input>
+                    <Input.InputElement
+                      name="surname"
+                      value={surname}
+                      onChange={(event) => {
+                        setSurname(event.target.value);
+                      }}
+                    />
+                  </Input>
+                </div>
+
+                <div>
+                  <Heading as="h5" className="text-l mb-2">
+                    Email
+                  </Heading>
+                  <Input>
+                    <Input.InputElement
+                      name="email"
+                      value={email}
+                      onChange={(event) => {
+                        setEmail(event.target.value);
+                      }}
+                    />
+                  </Input>
+                </div>
+
+                <div>
+                  <Heading as="h5" className="text-l mb-2">
+                    Newsletter
+                  </Heading>
+                  <Label
+                    label="signup for newsletter"
+                    labelDirection="right"
+                    gap="2"
+                  >
+                    <Checkbox
+                      size="XL"
+                      checked={newsLetter}
+                      name="checkbox"
+                      onChange={() => {
+                        setNewsLetter((prev) => !prev);
+                      }}
+                    />
+                  </Label>
+                </div>
+
+                <div>
+                  <Heading as="h5" className="text-l mb-2">
+                    How many years of work experience?
+                  </Heading>
+                  <Counter
+                    savedData={workExperience}
+                    onChange={(newValue) => setWorkExperience(newValue)}
+                  />
+                </div>
+
+                <div>
+                  <Heading as="h5">Your favorite color</Heading>
+
+                  <div className="flex flex-col space-y-5">
+                    {[
+                      { label: "red", value: "red" },
+                      { label: "blue", value: "blue" },
+                      { label: "yellow", value: "yellow" },
+                      { label: "other", value: "other" },
+                    ].map((each, index) => {
+                      return (
+                        <Label
+                          key={"RadioButtonGroupB" + index}
+                          label={each.label}
+                          labelDirection="right"
+                        >
+                          <RadioButton
+                            checked={favoriteColor[index]}
+                            name="RadioB"
+                            size="XL"
+                            onChange={() =>
+                              handleRadioChange(
+                                favoriteColor,
+                                setFavoriteColor,
+                                index
+                              )
+                            }
+                          />
+                        </Label>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div>
+                  <Heading as="h5">Drivers license</Heading>
+
+                  <Select>
+                    <Select.SelectElement
+                      savedData={driversLicense}
+                      onChange={(event) =>
+                        setDriversLicense(event.target.value)
+                      }
+                    >
+                      {[
+                        { value: "option0", text: "Select an option" },
+                        { value: "yes", text: "yes" },
+                        { value: "no", text: "no" },
+                      ].map((each, index) => (
+                        <Select.SelectOption value={each.value} key={index}>
+                          {each.text}
+                        </Select.SelectOption>
+                      ))}
+                    </Select.SelectElement>
+                    <Select.SelectIcon></Select.SelectIcon>
+                  </Select>
+                </div>
+
+                <Divider variation="horizontal" />
+
+                <Button className="flex justify-center max-w-[100px]">
+                  Submit
+                </Button>
+              </form>
+            </div>
+          </Layout>
+        </>
+      </TabbedCard.Preview>
+      <TabbedCard.Code>
+        <Code />
+      </TabbedCard.Code>
+    </TabbedCard>
+  );
+}

@@ -38,6 +38,7 @@ import { CodeBlock } from "@mankindui/core/components";
 import { Heading, Layout, Text } from "@mankindui/core";
 
 // import TreeExample from './examples/Tree';
+import FormExample from "./examples/Form";
 
 const App = () => {
   return (
@@ -163,6 +164,7 @@ const App = () => {
           <ToggleSwitchExample />
 
           {/* <TreeExample /> */}
+          <FormExample />
         </Layout>
       </div>
     </>
