@@ -60,7 +60,7 @@ export default function Form() {
       <TabbedCard.Preview>
         <>
           <Layout className="flex justify-center">
-            <div className="border border-gray-400/50 min-h-30 w-150 flex justify-center flex-col p-5 m-15 rounded-xl">
+            <div className="border border-gray-400/50 min-h-30 w-full md:w-150 flex justify-center flex-col p-5 m-3 md:m-15 lg:m-30 rounded-xl">
               <Heading as="h2" className="text-2xl mb-6">
                 Details page
               </Heading>
