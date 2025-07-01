@@ -12,16 +12,24 @@ const ButtonExample = () => {
       <TabbedCard.Preview>
         <>
           <Layout>
-            <Button intent="primary">primary</Button>
+            <Button intent="primary" className="px-4 py-2">
+              primary
+            </Button>
           </Layout>
           <Layout>
-            <Button intent="secondary">secondary</Button>
+            <Button intent="secondary" className="px-4 py-2">
+              secondary
+            </Button>
           </Layout>
           <Layout>
-            <Button intent="contained">Contained</Button>
+            <Button intent="contained" className="px-4 py-2">
+              Contained
+            </Button>
           </Layout>
           <Layout>
-            <Button intent="outlined">Outlined</Button>
+            <Button intent="outlined" className="px-4 py-2">
+              Outlined
+            </Button>
           </Layout>
           <Layout>
             <Button intent="icon">
@@ -34,13 +42,10 @@ const ButtonExample = () => {
             <Button intent="text">Text</Button>
           </Layout>
           <Layout>
-            <Button
-              intent="contained"
-              className="bg-red-500 hover:bg-red-600 text-white"
-            >
-              <Label gap="10px" label="right" labelDirection="right">
+            <Button intent="contained" className="px-4 py-2">
+              <Label gap="15px" label="right" labelDirection="right">
                 <Icon size="L">
-                  <ThumbsUpIcon stroke="blue" />
+                  <ThumbsUpIcon stroke="black" />
                 </Icon>
               </Label>
             </Button>

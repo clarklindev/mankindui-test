@@ -41,16 +41,6 @@ export default function Form() {
       }),
   });
 
-  const handleRadioChange = (
-    savedData: Array<boolean>,
-    updateSavedData: (newData: Array<boolean>) => void,
-    index: number
-  ) => {
-    const newValues = [...savedData].fill(false);
-    newValues[index] = true;
-    updateSavedData(newValues);
-  };
-
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -217,11 +207,10 @@ export default function Form() {
                           name="RadioB"
                           size="XL"
                           onChange={() => {
-                            handleRadioChange(
-                              favoriteColor,
-                              setFavoriteColor,
-                              index
-                            );
+                            const newValues = [...favoriteColor].fill(false);
+                            newValues[index] = true;
+                            setFavoriteColor(newValues);
+
                             setFormErrors((prev) => ({
                               ...prev,
                               favoriteColor: "",
